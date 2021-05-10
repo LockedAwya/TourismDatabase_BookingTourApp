@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace TourismDatabase1
 {
-    public partial class RegisterForm : Class1
+    public partial class RegisterForm : Form
     {
         string query3 = "Insert into tourismdatabase.account(name, username, password, phone_number, email, address) " +
                     "values(@name, @username, @password, @phone_number, @email, @address)";
@@ -22,8 +22,7 @@ namespace TourismDatabase1
             InitializeComponent();
             try
             {
-                //connection = ConnectionSingleton.getInstance();
-                connection = base.getConnectionInstance();
+                AppStates.connection = ConnectionSingleton.getInstance();
             }
             catch (Exception e)
             {
@@ -35,8 +34,8 @@ namespace TourismDatabase1
         {
             try
             {
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand(query3, connection);
+                AppStates.connection.Open();
+                MySqlCommand cmd = new MySqlCommand(query3, AppStates.connection);
                 cmd.Parameters.AddWithValue("@name", NameBox.Text);
                 cmd.Parameters.AddWithValue("@username", UsernameBox.Text);
                 cmd.Parameters.AddWithValue("@password", PasswordBox.Text);
@@ -44,7 +43,7 @@ namespace TourismDatabase1
                 cmd.Parameters.AddWithValue("@email", EmailBox.Text);
                 cmd.Parameters.AddWithValue("@address", AddressBox.Text);
                 cmd.ExecuteNonQuery();
-                connection.Close();
+                AppStates.connection.Close();
                 MessageBox.Show("Register successfully!!!");
             }
             catch (Exception ex)

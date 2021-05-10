@@ -74,7 +74,6 @@ namespace TourismDatabase1
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(1325, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 31);
@@ -102,10 +101,9 @@ namespace TourismDatabase1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(717, 12);
+            this.label1.Location = new System.Drawing.Point(940, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 19);
+            this.label1.Size = new System.Drawing.Size(76, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Hello user:";
             // 
@@ -128,7 +126,6 @@ namespace TourismDatabase1
             // 
             // refreshButton
             // 
-            this.refreshButton.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshButton.Location = new System.Drawing.Point(191, 72);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(95, 24);
@@ -139,10 +136,9 @@ namespace TourismDatabase1
             // 
             // BookTourButton
             // 
-            this.BookTourButton.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookTourButton.Location = new System.Drawing.Point(883, 398);
+            this.BookTourButton.Location = new System.Drawing.Point(760, 449);
             this.BookTourButton.Name = "BookTourButton";
-            this.BookTourButton.Size = new System.Drawing.Size(147, 55);
+            this.BookTourButton.Size = new System.Drawing.Size(95, 24);
             this.BookTourButton.TabIndex = 38;
             this.BookTourButton.Text = "Book tour";
             this.BookTourButton.UseVisualStyleBackColor = true;
@@ -178,9 +174,9 @@ namespace TourismDatabase1
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(0, 102);
+            this.panel1.Location = new System.Drawing.Point(0, 111);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1420, 874);
+            this.panel1.Size = new System.Drawing.Size(1420, 865);
             this.panel1.TabIndex = 39;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -299,130 +295,117 @@ namespace TourismDatabase1
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(22, 322);
+            this.label12.Location = new System.Drawing.Point(41, 322);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 19);
+            this.label12.Size = new System.Drawing.Size(75, 17);
             this.label12.TabIndex = 23;
             this.label12.Text = "TourPolicy";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(22, 213);
+            this.label13.Location = new System.Drawing.Point(41, 213);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(131, 19);
+            this.label13.Size = new System.Drawing.Size(109, 17);
             this.label13.TabIndex = 22;
             this.label13.Text = "TourDescription";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(784, 322);
+            this.label14.Location = new System.Drawing.Point(803, 322);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(102, 19);
+            this.label14.Size = new System.Drawing.Size(80, 17);
             this.label14.TabIndex = 21;
             this.label14.Text = "FlightBrand";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(784, 211);
+            this.label15.Location = new System.Drawing.Point(803, 211);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(117, 19);
+            this.label15.Size = new System.Drawing.Size(92, 17);
             this.label15.TabIndex = 20;
             this.label15.Text = "ChildrenPrice";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(784, 268);
+            this.label16.Location = new System.Drawing.Point(803, 268);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(91, 19);
+            this.label16.Size = new System.Drawing.Size(72, 17);
             this.label16.TabIndex = 19;
             this.label16.Text = "AdultPrice";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(784, 148);
+            this.label18.Location = new System.Drawing.Point(803, 148);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(124, 19);
+            this.label18.Size = new System.Drawing.Size(104, 17);
             this.label18.TabIndex = 17;
             this.label18.Text = "EndDestination";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(784, 86);
+            this.label11.Location = new System.Drawing.Point(803, 86);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 19);
+            this.label11.Size = new System.Drawing.Size(109, 17);
             this.label11.TabIndex = 16;
             this.label11.Text = "StartDestination";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(784, 22);
+            this.label10.Location = new System.Drawing.Point(803, 22);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 19);
+            this.label10.Size = new System.Drawing.Size(63, 17);
             this.label10.TabIndex = 15;
             this.label10.Text = "EndDate";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 418);
+            this.label9.Location = new System.Drawing.Point(41, 418);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 19);
+            this.label9.Size = new System.Drawing.Size(68, 17);
             this.label9.TabIndex = 14;
             this.label9.Text = "StartDate";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 170);
+            this.label8.Location = new System.Drawing.Point(41, 170);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 19);
+            this.label8.Size = new System.Drawing.Size(57, 17);
             this.label8.TabIndex = 13;
             this.label8.Text = "Country";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(22, 124);
+            this.label7.Location = new System.Drawing.Point(41, 124);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 19);
+            this.label7.Size = new System.Drawing.Size(45, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "Name";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 67);
+            this.label6.Location = new System.Drawing.Point(41, 67);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 19);
+            this.label6.Size = new System.Drawing.Size(51, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "TourID";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 24);
+            this.label5.Location = new System.Drawing.Point(41, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 19);
+            this.label5.Size = new System.Drawing.Size(123, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "TravelAgencySSN";
             // 
@@ -436,16 +419,14 @@ namespace TourismDatabase1
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(581, 72);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(95, 19);
+            this.label17.Size = new System.Drawing.Size(82, 17);
             this.label17.TabIndex = 41;
             this.label17.Text = "Search tour";
             // 
             // SearchButton
             // 
-            this.SearchButton.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchButton.Location = new System.Drawing.Point(983, 68);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(95, 24);
@@ -457,19 +438,17 @@ namespace TourismDatabase1
             // IDLabel
             // 
             this.IDLabel.AutoSize = true;
-            this.IDLabel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDLabel.Location = new System.Drawing.Point(717, 41);
+            this.IDLabel.Location = new System.Drawing.Point(940, 41);
             this.IDLabel.Name = "IDLabel";
-            this.IDLabel.Size = new System.Drawing.Size(27, 19);
+            this.IDLabel.Size = new System.Drawing.Size(21, 17);
             this.IDLabel.TabIndex = 43;
             this.IDLabel.Text = "ID";
             // 
             // Profile_Button
             // 
-            this.Profile_Button.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_Button.Location = new System.Drawing.Point(1139, 14);
+            this.Profile_Button.Location = new System.Drawing.Point(55, 19);
             this.Profile_Button.Name = "Profile_Button";
-            this.Profile_Button.Size = new System.Drawing.Size(137, 24);
+            this.Profile_Button.Size = new System.Drawing.Size(95, 24);
             this.Profile_Button.TabIndex = 44;
             this.Profile_Button.Text = "Your Profile";
             this.Profile_Button.UseVisualStyleBackColor = true;

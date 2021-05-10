@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace TourismDatabase1
 {
-    public partial class FillingAdultInfo : UserControl
+    public partial class FillingAdultInfo : AppStates1
     {
         private string AddTravellersInfo = "Insert into tourismdatabase.travellers_info(aid, tid, ssn, name, PassportNumber, PhoneNumber, Country, BirthDate, Gender) " +
                     "values(@aid, @tid, @ssn, @name, @PassportNumber, @PhoneNumber, @Country, @BirthDate, @Gender)";
@@ -20,12 +20,12 @@ namespace TourismDatabase1
         public FillingAdultInfo()
         {
             InitializeComponent();
-            AppStates.connection = ConnectionSingleton.getInstance();
+            connection = ConnectionSingleton.getInstance();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -43,25 +43,27 @@ namespace TourismDatabase1
             //do the query here
             try
             {
-                //AppStates.connection = ConnectionSingleton.getInstance();
-                AppStates.getConnectionInstance();
-                //AppStates.connection = new MySqlConnection();
-                //AppStates.connection.Open();
-                AppStates.getConnectionInstance().Open();
-                AppStates.cmd = new MySqlCommand(AddTravellersInfo, AppStates.connection);
-                AppStates.cmd.Parameters.AddWithValue("@aid", AppStates.userId);
-                AppStates.cmd.Parameters.AddWithValue("@tid", AppStates.TourID);
-                AppStates.cmd.Parameters.AddWithValue("@ssn", SSNTextBox.Text);
-                AppStates.cmd.Parameters.AddWithValue("@name", NameTextBox.Text);
-                AppStates.cmd.Parameters.AddWithValue("@PassportNumber", PassportTextBox.Text);
-                AppStates.cmd.Parameters.AddWithValue("@PhoneNumber", PnumberTextBox.Text);
-                AppStates.cmd.Parameters.AddWithValue("@Country", NationalityComboBox.SelectedItem.ToString());
-                AppStates.cmd.Parameters.AddWithValue("@Birthdate", BirthDatePicker.Value.Date.ToString("yyyy-MM-dd"));
-                AppStates.cmd.Parameters.AddWithValue("@Gender", GenderSelection.SelectedItem.ToString());
-                AppStates.cmd.ExecuteNonQuery();
+                base.getConnectionInstance().Open();
+                cmd = new MySqlCommand(AddTravellersInfo, connection);
+                cmd.Parameters.AddWithValue("@aid", userId);
+                cmd.Parameters.AddWithValue("@tid", TourID);
+                cmd.Parameters.AddWithValue("@ssn", SSNTextBox.Text);
+                cmd.Parameters.AddWithValue("@name", NameTextBox.Text);
+                cmd.Parameters.AddWithValue("@PassportNumber", PassportTextBox.Text);
+                cmd.Parameters.AddWithValue("@PhoneNumber", PnumberTextBox.Text);
+                cmd.Parameters.AddWithValue("@Country", NationalityComboBox.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@Birthdate", BirthDatePicker.Value.Date.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@Gender", GenderSelection.SelectedItem.ToString());
+                cmd.ExecuteNonQuery();
                 //AppStates.connection.Close();
-                AppStates.getConnectionInstance().Clone();
-                MessageBox.Show("Add travellers info successfully!!!");
+                base.getConnectionInstance().Close();
+                MessageBox.Show("Add travellers info successfully!!");
+                SSNTextBox.ReadOnly = true;
+                NameTextBox.ReadOnly = true;
+                PassportTextBox.ReadOnly = true;
+                PnumberTextBox.ReadOnly = true;
+                BirthDatePicker.Refresh();
+                button1.Visible = false;
             }
             catch (Exception ex)
             {

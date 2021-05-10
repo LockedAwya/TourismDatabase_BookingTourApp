@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Data;
 
 namespace TourismDatabase1
 {
-    public class Class1 : Form
+    public partial class AppStates1 : UserControl
     {
-        protected MySqlConnection connection = null;
-        protected MySqlDataAdapter adapter = null;
-        protected DataTable dtb = null;
-        protected MySqlCommand cmd = null;
-
         public static bool isLogin = false;
         public static string userName = "";
         public static string userId = "";
@@ -27,13 +24,18 @@ namespace TourismDatabase1
 
         public static string Tourname = "";
 
-       
-        /*public static FillingChildrenInfo childrenInfo = null;
+        public static MySqlConnection connection = null;
+        public static MySqlDataAdapter adapter = null;
+        public static DataTable dtb = null;
+        public static MySqlCommand cmd = null;
+        public static MySqlDataReader dataReader = null;
+        public static FillingChildrenInfo childrenInfo = null;
         public static FillingAdultInfo adultInfo = null;
         public static LoginForm loginForm = null;
         public static Profile profile = null;
         public static RegisterForm registerForm = null;
-        public static UserMainFrame userMainFrame = null;*/
+        public static UserMainFrame userMainFrame = null;
+
 
         public MySqlConnection getConnectionInstance()
         {
@@ -50,33 +52,14 @@ namespace TourismDatabase1
         {
             return new MySqlCommand(query, connection);
         }
-
-        public DataTable getDataTable()
+        public AppStates1()
         {
-            return new DataTable();
+            InitializeComponent();
         }
 
-        public void getSQLInstance(string name)
+        private void AppStates1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // Class1
-            // 
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Name = "Class1";
-            this.Load += new System.EventHandler(this.Class1_Load);
-            this.ResumeLayout(false);
-
-        }
-
-        private void Class1_Load(object sender, EventArgs e)
-        {
-
+                
         }
     }
 }

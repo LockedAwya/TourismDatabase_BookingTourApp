@@ -17,6 +17,7 @@ namespace TourismDatabase1
         private static BookingTourSection userControl1 = new BookingTourSection();
         private FillingAdultInfo[] listAdult = new FillingAdultInfo[50];
         private FillingChildrenInfo[] listChildren = new FillingChildrenInfo[50];
+        private MySqlConnection connection = null;
         //System.Windows.Forms.Button b = new Button();
         public BookingTourSection()
         {
@@ -34,10 +35,10 @@ namespace TourismDatabase1
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
-            TournameBox.Text = AppStates1.Tourname;
-            TourIDBox.Text = AppStates1.TourID;
-            ChildrenPriceBox.Text = AppStates1.children_price;
-            AdultPriceBox.Text = AppStates1.adult_price;
+            TournameBox.Text = AppStates.Tourname;
+            TourIDBox.Text = AppStates.TourID;
+            ChildrenPriceBox.Text = AppStates.children_price;
+            AdultPriceBox.Text = AppStates.adult_price;
         }
 
         //Back button
@@ -49,8 +50,8 @@ namespace TourismDatabase1
         
         private void moneyChanged()
         {
-            long money = Convert.ToInt64(adult_price) * (long)no_of_Adults.Value +
-                Convert.ToInt64(children_price) * (long)no_of_Children.Value;
+            long money = Convert.ToInt64(AppStates.adult_price) * (long)no_of_Adults.Value +
+                Convert.ToInt64(AppStates.children_price) * (long)no_of_Children.Value;
             Amount_Money.Text = money.ToString();
         }
 
@@ -58,8 +59,7 @@ namespace TourismDatabase1
         {
             moneyChanged();
             int initY = 0;
-            no_of_adults = (int)no_of_Adults.Value;
-            for (int i = 0; i < no_of_adults; i++)
+            for (int i = 0; i < no_of_Adults.Value; i++)
             {
                 this.listAdult[i] = new FillingAdultInfo();
                 if (i == 0)
@@ -86,8 +86,7 @@ namespace TourismDatabase1
         {
             moneyChanged();
             int initY = 0;
-            no_of_children = (int)no_of_Children.Value; 
-            for (int i = 0; i < no_of_children; i++)
+            for (int i = 0; i < no_of_Children.Value; i++)
             {
                 this.listChildren[i] = new FillingChildrenInfo();
                 if (i == 0)

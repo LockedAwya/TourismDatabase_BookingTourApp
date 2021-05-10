@@ -40,8 +40,7 @@ namespace TourismDatabase1
             // 
             // LoginBox
             // 
-            this.LoginBox.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBox.Location = new System.Drawing.Point(192, 372);
+            this.LoginBox.Location = new System.Drawing.Point(181, 265);
             this.LoginBox.Name = "LoginBox";
             this.LoginBox.Size = new System.Drawing.Size(179, 49);
             this.LoginBox.TabIndex = 0;
@@ -51,8 +50,7 @@ namespace TourismDatabase1
             // 
             // RegisterBox
             // 
-            this.RegisterBox.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterBox.Location = new System.Drawing.Point(437, 372);
+            this.RegisterBox.Location = new System.Drawing.Point(426, 265);
             this.RegisterBox.Name = "RegisterBox";
             this.RegisterBox.Size = new System.Drawing.Size(179, 49);
             this.RegisterBox.TabIndex = 1;
@@ -63,36 +61,33 @@ namespace TourismDatabase1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 224);
+            this.label1.Location = new System.Drawing.Point(38, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 19);
+            this.label1.Size = new System.Drawing.Size(128, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Email or Username";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(79, 287);
+            this.label2.Location = new System.Drawing.Point(38, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 19);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(315, 132);
+            this.label3.Location = new System.Drawing.Point(362, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 55);
+            this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Login";
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(248, 287);
+            this.passwordTextBox.Location = new System.Drawing.Point(181, 162);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(424, 22);
             this.passwordTextBox.TabIndex = 9;
@@ -100,7 +95,7 @@ namespace TourismDatabase1
             // 
             // UsernameBox1
             // 
-            this.UsernameBox1.Location = new System.Drawing.Point(248, 221);
+            this.UsernameBox1.Location = new System.Drawing.Point(181, 96);
             this.UsernameBox1.Name = "UsernameBox1";
             this.UsernameBox1.Size = new System.Drawing.Size(424, 22);
             this.UsernameBox1.TabIndex = 30;
@@ -117,10 +112,8 @@ namespace TourismDatabase1
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RegisterBox);
             this.Controls.Add(this.LoginBox);
-            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "LoginForm";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

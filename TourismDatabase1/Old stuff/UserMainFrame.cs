@@ -34,8 +34,8 @@ namespace TourismDatabase1
 
         private void UserMainFrame_Load(object sender, EventArgs e)
         {
-            label1.Text += " " + AppStates1.userName;
-            IDLabel.Text += " " + AppStates1.userId;
+            label1.Text += " " + AppStates.userName;
+            IDLabel.Text += " " + AppStates.userId;
         }
         /**
          * logout to login
@@ -67,41 +67,35 @@ namespace TourismDatabase1
 
         private void displayAllData()
         {
-            //dtb = new DataTable();
-            dtb = base.getDataTable();
-            //connection = ConnectionSingleton.getInstance();
-            connection = base.getConnectionInstance();
+            AppStates.dtb = new DataTable();
+            AppStates.connection = ConnectionSingleton.getInstance();
             if (AppStates.isLogin == true)
             {
-                adapter = new MySqlDataAdapter(query1, connection);
-                adapter.Fill(dtb);
-                dataGridView1.DataSource = dtb;
+                AppStates.adapter = new MySqlDataAdapter(query1, AppStates.connection);
+                AppStates.adapter.Fill(AppStates.dtb);
+                dataGridView1.DataSource = AppStates.dtb;
                 MessageBox.Show("You are now connected");
                 //BookTourButton.Enabled = false;
-                connection.Close();
+                AppStates.connection.Close();
             }
         }
 
         private void displaySearchData()
         {
-            //AppStates.dtb = new DataTable();
-            dtb = base.getDataTable();
-            //AppStates.connection = ConnectionSingleton.getInstance();
-            connection = base.getConnectionInstance();
+            AppStates.dtb = new DataTable();
+            AppStates.connection = ConnectionSingleton.getInstance();
             string search = "select t.*, fm.flight_name from tour t join flight_manager fm on t.flight_id = fm.flight_id " + "and id like '%" + SearchBox.Text + "%'" + " or name like '%" + SearchBox.Text + "%'";
             //string searchPrefixTourID = "select * from tour where id like '%" + SearchBox.Text + "%'" + " or name like '%" + SearchBox.Text + "%'";
             if (AppStates.isLogin == true)
             {
-                //cmd = new MySqlCommand(search, connection);
-                cmd = base.getCmd(search, connection);
+                MySqlCommand cmd = new MySqlCommand(search, AppStates.connection);
                 cmd.Parameters.AddWithValue("@data", SearchBox.Text);
-                //adapter = new MySqlDataAdapter(search, connection);
-                adapter = base.getAdapter(search, connection);
-                adapter.Fill(dtb);
-                dataGridView1.DataSource = dtb;
+                AppStates.adapter = new MySqlDataAdapter(search, AppStates.connection);
+                AppStates.adapter.Fill(AppStates.dtb);
+                dataGridView1.DataSource = AppStates.dtb;
                 MessageBox.Show("You are now connected");
                 //BookTourButton.Enabled = false;
-                connection.Close();
+                AppStates.connection.Close();
             }
             //SearchBox.Text
             //dtb = new DataTable();
@@ -111,9 +105,9 @@ namespace TourismDatabase1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             ID_TourBox.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            AppStates1.TourID = ID_TourBox.Text;
+            AppStates.TourID = ID_TourBox.Text;
             TourNameBox.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            AppStates1.Tourname = TourNameBox.Text;
+            AppStates.Tourname = TourNameBox.Text;
             Country_Box.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             DescriptionBox.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             PolicyBox.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
@@ -122,9 +116,9 @@ namespace TourismDatabase1
             StartDestBox.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
             EndDestBox.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
             ChildrenPriceBox.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            AppStates1.children_price = ChildrenPriceBox.Text;
+            AppStates.children_price = ChildrenPriceBox.Text;
             AdultPriceBox.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
-            AppStates1.adult_price = AdultPriceBox.Text;
+            AppStates.adult_price = AdultPriceBox.Text;
             FlightBrandBox.Text = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
         }
 

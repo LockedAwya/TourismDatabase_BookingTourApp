@@ -365,6 +365,17 @@ namespace TourismDatabase1
             this.Controls.Add(this.label2);
             this.Name = "FillingChildrenInfo";
             this.Size = new System.Drawing.Size(549, 621);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.PnumberTextBox, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.NameTextBox, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.BirthDatePicker, 0);
+            this.Controls.SetChildIndex(this.GenderSelection, 0);
+            this.Controls.SetChildIndex(this.NationalityComboBox, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

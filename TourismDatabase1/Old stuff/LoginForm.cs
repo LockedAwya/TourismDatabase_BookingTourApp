@@ -11,10 +11,12 @@ using MySql.Data.MySqlClient;
 
 namespace TourismDatabase1
 {
-    public partial class LoginForm : Class1
+    public partial class LoginForm : Form
     {
         private RegisterForm register = null;
         private UserMainFrame mainFrame = null;
+        //private MySqlConnection connection = null;
+        //private MySqlCommand cmd = null;
         private string getInfoQueryWithUsername = "Select * from account where username = @username and password = @password";
         private bool isLogin = false;
         private static LoginForm loginForm = new LoginForm();
@@ -26,7 +28,8 @@ namespace TourismDatabase1
         public LoginForm()
         {
             InitializeComponent();
-            connection = base.getConnectionInstance();
+            //connection = ConnectionSingleton.getInstance();
+            AppStates.connection = ConnectionSingleton.getInstance();
         }
 
         public static LoginForm getInstance()
@@ -50,18 +53,19 @@ namespace TourismDatabase1
             if (UsernameBox1.Equals("") || passwordTextBox.Equals(""))
             {
                 //loggedSuccess = false;
-                AppStates1.isLogin = false;
-
+                AppStates.isLogin = false;
             } else
             {
                 try
                 {
-                    connection.Open();
-                    cmd = base.getCmd(getInfoQueryWithUsername, connection);
-                    cmd.Parameters.AddWithValue("@username", UsernameBox1.Text);
-                    cmd.Parameters.AddWithValue("@password", passwordTextBox.Text);
+                    //connection = ConnectionSingleton.getInstance();
                     //connection.Open();
-                    MySqlDataReader dataReader = cmd.ExecuteReader();
+                    AppStates.connection.Open();
+                    AppStates.cmd = new MySqlCommand(getInfoQueryWithUsername, AppStates.connection);
+                    AppStates.cmd.Parameters.AddWithValue("@username", UsernameBox1.Text);
+                    AppStates.cmd.Parameters.AddWithValue("@password", passwordTextBox.Text);
+                    //connection.Open();
+                    MySqlDataReader dataReader = AppStates.cmd.ExecuteReader();
                     if (dataReader.HasRows)
                     {
                         AppStates.isLogin = true;
@@ -70,13 +74,13 @@ namespace TourismDatabase1
                         {
                             if (dataReader["username"].ToString() == UsernameBox1.Text)
                             {
-                                AppStates1.userName = UsernameBox1.Text;
-                                Console.WriteLine("Account name is " + userName);
-                                AppStates1.userId = dataReader["id"].ToString();
-                                Console.WriteLine("Account id is " + userId);
+                                AppStates.userName = UsernameBox1.Text;
+                                Console.WriteLine("Account name is " + AppStates.userName);
+                                AppStates.userId = dataReader["id"].ToString();
+                                Console.WriteLine("Account id is " + AppStates.userId);
                             }
                         }
-                        connection.Close();
+                        AppStates.connection.Close();
                         this.Hide();
                         mainFrame = new UserMainFrame();
                         mainFrame.Show();
@@ -102,11 +106,6 @@ namespace TourismDatabase1
         }
 
         private void EmailOrUsernameBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }
