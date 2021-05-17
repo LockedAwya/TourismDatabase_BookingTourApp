@@ -21,24 +21,29 @@ namespace TourismDatabase1
         public static string children_price = "";
         public static string adult_price = "";
         public static string money_sum = "";
-        public static int no_of_children = 0;
+        protected int no_of_children = 0;
 
         public static string Tourname = "";
         public static int no_of_adults = 0;
+        public static DateTime getCurrentTime = DateTime.Now;
+        public static string info_num = "";
+        protected int age = 0;
 
-        public static MySqlConnection connection = null;
-        public static MySqlDataAdapter adapter = null;
-        public static DataTable dtb = null;
-        public static MySqlCommand cmd = null;
-        public static MySqlDataReader dataReader = null;
-        public static FillingChildrenInfo childrenInfo = null;
-        public static FillingAdultInfo adultInfo = null;
-        public static LoginForm loginForm = null;
-        public static Profile profile = null;
-        public static RegisterForm registerForm = null;
-        public static UserMainFrame userMainFrame = null;
+        protected MySqlConnection connection = null;
+        protected MySqlDataAdapter adapter = null;
+        protected DataTable dtb = null;
+        protected MySqlCommand cmd = null;
+        protected MySqlCommand cmd2 = null;
+        protected MySqlDataReader dataReader = null;
+        protected FillingChildrenInfo childrenInfo = null;
+        protected FillingAdultInfo adultInfo = null;
+        protected LoginForm loginForm = null;
+        protected Profile profile = null;
+        protected RegisterForm registerForm = null;
+        protected UserMainFrame userMainFrame = null;
         public static bool adultsAdded = false;
         public static bool childrenAdded = false;
+        public static string payment = "";
 
 
         public MySqlConnection getConnectionInstance()

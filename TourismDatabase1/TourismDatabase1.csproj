@@ -55,6 +55,18 @@
     <Compile Include="AppStates1.Designer.cs">
       <DependentUpon>AppStates1.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookingHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingHistory.Designer.cs">
+      <DependentUpon>BookingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changePasswordForm.Designer.cs">
+      <DependentUpon>changePasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,7 +95,7 @@
     <Compile Include="FillingAdultInfo.Designer.cs">
       <DependentUpon>FillingAdultInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface1.cs" />
+    <Compile Include="Hashing.cs" />
     <Compile Include="Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     </Compile>
     <Compile Include="FillingChildrenInfo.Designer.cs">
       <DependentUpon>FillingChildrenInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TravelAgentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravelAgentsForm.Designer.cs">
+      <DependentUpon>TravelAgentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserMainFrame.cs">
       <SubType>Form</SubType>
@@ -118,6 +136,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AppStates1.resx">
       <DependentUpon>AppStates1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingHistory.resx">
+      <DependentUpon>BookingHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changePasswordForm.resx">
+      <DependentUpon>changePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Class1.resx">
       <DependentUpon>Class1.cs</DependentUpon>
@@ -154,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TravelAgentsForm.resx">
+      <DependentUpon>TravelAgentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserMainFrame.resx">
       <DependentUpon>UserMainFrame.cs</DependentUpon>

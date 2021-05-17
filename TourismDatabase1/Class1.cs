@@ -24,8 +24,10 @@ namespace TourismDatabase1
         public static string children_price = "";
         public static string adult_price = "";
         public static string money_sum = "";
+        public static string info_num = "";
 
         public static string Tourname = "";
+        public static MySqlDataReader dataReader = null;
 
        
         /*public static FillingChildrenInfo childrenInfo = null;

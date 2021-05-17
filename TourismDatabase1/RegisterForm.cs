@@ -13,6 +13,7 @@ namespace TourismDatabase1
 {
     public partial class RegisterForm : Class1
     {
+        //aes_decrypt(@password, @password);
         string query3 = "Insert into tourismdatabase.account(name, username, password, phone_number, email, address) " +
                     "values(@name, @username, @password, @phone_number, @email, @address)";
         //MySqlConnection connection = null;
@@ -35,11 +36,13 @@ namespace TourismDatabase1
         {
             try
             {
+                //string encryptedPassword = Hashing.ComputeSha256Hash(PasswordBox.Text);
+                //AppStates.hashedPass = Hashing.ComputeSha256Hash(PasswordBox.Text);
                 connection.Open();
                 MySqlCommand cmd = new MySqlCommand(query3, connection);
                 cmd.Parameters.AddWithValue("@name", NameBox.Text);
                 cmd.Parameters.AddWithValue("@username", UsernameBox.Text);
-                cmd.Parameters.AddWithValue("@password", PasswordBox.Text);
+                cmd.Parameters.AddWithValue("@password", Hashing.ComputeSha256Hash(PasswordBox.Text)); 
                 cmd.Parameters.AddWithValue("@phone_number", PhoneNumberBox.Text);
                 cmd.Parameters.AddWithValue("@email", EmailBox.Text);
                 cmd.Parameters.AddWithValue("@address", AddressBox.Text);
@@ -50,11 +53,10 @@ namespace TourismDatabase1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                connection.Close();
             }
         }
 
-        //singleton registerform
-        //private const string connectionString = "datasource = localhost; username=root; password=; database=tourismdatabase";
         private static RegisterForm RegisterInstance = new RegisterForm();
         public static RegisterForm getInstance()
         {
@@ -100,6 +102,11 @@ namespace TourismDatabase1
             loginForm = LoginForm.getInstance();
             this.Hide();
             loginForm.Show();
+        }
+
+        private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

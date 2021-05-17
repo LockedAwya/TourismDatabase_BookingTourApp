@@ -44,6 +44,8 @@ namespace TourismDatabase1
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.Info = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // NationalityComboBox
@@ -248,7 +250,7 @@ namespace TourismDatabase1
             "Yemen",
             "Zambia",
             "Zimbabwe"});
-            this.NationalityComboBox.Location = new System.Drawing.Point(190, 406);
+            this.NationalityComboBox.Location = new System.Drawing.Point(170, 289);
             this.NationalityComboBox.Name = "NationalityComboBox";
             this.NationalityComboBox.Size = new System.Drawing.Size(215, 24);
             this.NationalityComboBox.TabIndex = 22;
@@ -261,7 +263,7 @@ namespace TourismDatabase1
             this.GenderSelection.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.GenderSelection.Location = new System.Drawing.Point(190, 576);
+            this.GenderSelection.Location = new System.Drawing.Point(170, 419);
             this.GenderSelection.Name = "GenderSelection";
             this.GenderSelection.Size = new System.Drawing.Size(106, 24);
             this.GenderSelection.TabIndex = 21;
@@ -269,26 +271,29 @@ namespace TourismDatabase1
             // BirthDatePicker
             // 
             this.BirthDatePicker.AccessibleName = "Databinding1";
-            this.BirthDatePicker.Location = new System.Drawing.Point(190, 496);
+            this.BirthDatePicker.Location = new System.Drawing.Point(170, 354);
             this.BirthDatePicker.Name = "BirthDatePicker";
             this.BirthDatePicker.Size = new System.Drawing.Size(245, 22);
             this.BirthDatePicker.TabIndex = 20;
             this.BirthDatePicker.Value = new System.DateTime(2021, 5, 3, 0, 0, 0, 0);
+            this.BirthDatePicker.ValueChanged += new System.EventHandler(this.BirthDatePicker_ValueChanged);
             // 
             // label1
             // 
             this.label1.AccessibleName = "Databinding1";
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 62);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(55, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 17);
+            this.label1.Size = new System.Drawing.Size(39, 19);
             this.label1.TabIndex = 10;
             this.label1.Text = "SSN";
             // 
             // button1
             // 
             this.button1.AccessibleName = "Databinding1";
-            this.button1.Location = new System.Drawing.Point(230, 643);
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(74, 508);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 34);
             this.button1.TabIndex = 17;
@@ -299,7 +304,7 @@ namespace TourismDatabase1
             // SSNTextBox
             // 
             this.SSNTextBox.AccessibleName = "Databinding1";
-            this.SSNTextBox.Location = new System.Drawing.Point(190, 59);
+            this.SSNTextBox.Location = new System.Drawing.Point(170, 68);
             this.SSNTextBox.Name = "SSNTextBox";
             this.SSNTextBox.Size = new System.Drawing.Size(215, 22);
             this.SSNTextBox.TabIndex = 0;
@@ -308,16 +313,17 @@ namespace TourismDatabase1
             // 
             this.label7.AccessibleName = "Databinding1";
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(64, 579);
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(29, 424);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 17);
+            this.label7.Size = new System.Drawing.Size(65, 19);
             this.label7.TabIndex = 16;
             this.label7.Text = "Gender";
             // 
             // PassportTextBox
             // 
             this.PassportTextBox.AccessibleName = "Databinding1";
-            this.PassportTextBox.Location = new System.Drawing.Point(190, 225);
+            this.PassportTextBox.Location = new System.Drawing.Point(170, 185);
             this.PassportTextBox.Name = "PassportTextBox";
             this.PassportTextBox.Size = new System.Drawing.Size(215, 22);
             this.PassportTextBox.TabIndex = 1;
@@ -326,16 +332,17 @@ namespace TourismDatabase1
             // 
             this.label6.AccessibleName = "Databinding1";
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(64, 496);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(29, 357);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 17);
+            this.label6.Size = new System.Drawing.Size(81, 19);
             this.label6.TabIndex = 15;
             this.label6.Text = "Birthdate";
             // 
             // NameTextBox
             // 
             this.NameTextBox.AccessibleName = "Databinding1";
-            this.NameTextBox.Location = new System.Drawing.Point(190, 139);
+            this.NameTextBox.Location = new System.Drawing.Point(170, 121);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(215, 22);
             this.NameTextBox.TabIndex = 2;
@@ -344,16 +351,17 @@ namespace TourismDatabase1
             // 
             this.label5.AccessibleName = "Databinding1";
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 409);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(29, 290);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 17);
+            this.label5.Size = new System.Drawing.Size(70, 19);
             this.label5.TabIndex = 14;
             this.label5.Text = "Country";
             // 
             // PnumberTextBox
             // 
             this.PnumberTextBox.AccessibleName = "Databinding1";
-            this.PnumberTextBox.Location = new System.Drawing.Point(190, 321);
+            this.PnumberTextBox.Location = new System.Drawing.Point(170, 239);
             this.PnumberTextBox.Name = "PnumberTextBox";
             this.PnumberTextBox.Size = new System.Drawing.Size(215, 22);
             this.PnumberTextBox.TabIndex = 3;
@@ -362,9 +370,10 @@ namespace TourismDatabase1
             // 
             this.label4.AccessibleName = "Databinding1";
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(64, 324);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(29, 240);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 17);
+            this.label4.Size = new System.Drawing.Size(115, 19);
             this.label4.TabIndex = 13;
             this.label4.Text = "PhoneNumber";
             // 
@@ -372,9 +381,10 @@ namespace TourismDatabase1
             // 
             this.label3.AccessibleName = "Databinding1";
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 225);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(29, 185);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 17);
+            this.label3.Size = new System.Drawing.Size(134, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "PassportNumber";
             // 
@@ -382,11 +392,35 @@ namespace TourismDatabase1
             // 
             this.label2.AccessibleName = "Databinding1";
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(87, 142);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(46, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(51, 19);
             this.label2.TabIndex = 11;
             this.label2.Text = "Name";
+            // 
+            // EditButton
+            // 
+            this.EditButton.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditButton.Location = new System.Drawing.Point(263, 508);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(4);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(122, 34);
+            this.EditButton.TabIndex = 41;
+            this.EditButton.Text = "Delete";
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
+            // Info
+            // 
+            this.Info.AccessibleName = "Databinding1";
+            this.Info.AutoSize = true;
+            this.Info.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Info.Location = new System.Drawing.Point(195, 23);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(81, 19);
+            this.Info.TabIndex = 42;
+            this.Info.Text = "User Info ";
             // 
             // FillingAdultInfo
             // 
@@ -395,6 +429,8 @@ namespace TourismDatabase1
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 50);
             this.AutoScrollMinSize = new System.Drawing.Size(20, 50);
+            this.Controls.Add(this.Info);
+            this.Controls.Add(this.EditButton);
             this.Controls.Add(this.NationalityComboBox);
             this.Controls.Add(this.GenderSelection);
             this.Controls.Add(this.BirthDatePicker);
@@ -411,7 +447,7 @@ namespace TourismDatabase1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "FillingAdultInfo";
-            this.Size = new System.Drawing.Size(584, 653);
+            this.Size = new System.Drawing.Size(485, 603);
             this.Load += new System.EventHandler(this.UserControl2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -468,5 +504,7 @@ namespace TourismDatabase1
         }
 
         private System.Windows.Forms.ComboBox NationalityComboBox;
+        private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.Label Info;
     }
 }

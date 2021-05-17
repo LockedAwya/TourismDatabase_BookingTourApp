@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
 
 namespace TourismDatabase1
 {
@@ -16,8 +17,11 @@ namespace TourismDatabase1
         private RegisterForm register = null;
         private UserMainFrame mainFrame = null;
         private string getInfoQueryWithUsername = "Select * from account where username = @username and password = @password";
+        //private string getInfoQueryWithUsername = "Select * from account where username = @username and password = aes_encrypt(@password, @password)";
+        //aes_encrypt(@password, @password);
         private bool isLogin = false;
         private static LoginForm loginForm = new LoginForm();
+        private AdminMainFrame adminMainFrame = null;
 
         public bool getisLogin()
         {
@@ -26,7 +30,6 @@ namespace TourismDatabase1
         public LoginForm()
         {
             InitializeComponent();
-            connection = base.getConnectionInstance();
         }
 
         public static LoginForm getInstance()
@@ -37,30 +40,28 @@ namespace TourismDatabase1
             }
             return loginForm;
         }
-
-        private string isLoggedIn()
-        {
-
-            return "";
-        }
-
         private void LoginBox_Click(object sender, EventArgs e)
         {
+            connection = base.getConnectionInstance();
             //if logged in successfully, direct to the main frame
-            if (UsernameBox1.Equals("") || passwordTextBox.Equals(""))
+            if (UsernameBox1.Text == "" || passwordTextBox.Text == "")
             {
                 //loggedSuccess = false;
                 AppStates1.isLogin = false;
+                connection.Close();
 
-            } else
+            }
+            else
             {
                 try
                 {
                     connection.Open();
                     cmd = base.getCmd(getInfoQueryWithUsername, connection);
                     cmd.Parameters.AddWithValue("@username", UsernameBox1.Text);
-                    cmd.Parameters.AddWithValue("@password", passwordTextBox.Text);
+                    //cmd.Parameters.AddWithValue("@password", passwordTextBox.Text);
+                    cmd.Parameters.AddWithValue("@password", Hashing.ComputeSha256Hash(passwordTextBox.Text));
                     //connection.Open();
+                    //admin login
                     MySqlDataReader dataReader = cmd.ExecuteReader();
                     if (dataReader.HasRows)
                     {
@@ -83,12 +84,14 @@ namespace TourismDatabase1
                     } else
                     {
                         MessageBox.Show("Invalid Username or password");
+                        connection.Close();
                     }
 
                 }
                 catch (Exception exception)
                 {
                     MessageBox.Show(exception.Message);
+                    connection.Close();
                 }
             }
         }
@@ -109,6 +112,11 @@ namespace TourismDatabase1
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

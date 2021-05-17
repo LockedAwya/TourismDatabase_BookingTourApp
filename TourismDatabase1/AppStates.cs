@@ -18,6 +18,8 @@ namespace TourismDatabase1
         public static string children_price = "";
         public static string adult_price = "";
         public static string money_sum = "";
+        public static string hashedPass = "";
+        public static string paymentMethod = "";
 
         public static string Tourname = "";
 

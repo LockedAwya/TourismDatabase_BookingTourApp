@@ -49,9 +49,10 @@ namespace TourismDatabase1
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(95, 105);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 17);
+            this.label8.Size = new System.Drawing.Size(51, 19);
             this.label8.TabIndex = 0;
             this.label8.Text = "Name";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -59,61 +60,68 @@ namespace TourismDatabase1
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(95, 160);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 17);
+            this.label9.Size = new System.Drawing.Size(83, 19);
             this.label9.TabIndex = 1;
             this.label9.Text = "Username";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(95, 215);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 17);
+            this.label10.Size = new System.Drawing.Size(81, 19);
             this.label10.TabIndex = 2;
             this.label10.Text = "Password";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(95, 279);
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(95, 276);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 17);
+            this.label11.Size = new System.Drawing.Size(119, 19);
             this.label11.TabIndex = 3;
             this.label11.Text = "Phone Number";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(95, 329);
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(95, 326);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 17);
+            this.label12.Size = new System.Drawing.Size(54, 19);
             this.label12.TabIndex = 4;
             this.label12.Text = "Email";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(95, 386);
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(95, 383);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 17);
+            this.label13.Size = new System.Drawing.Size(68, 19);
             this.label13.TabIndex = 5;
             this.label13.Text = "Address";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(486, 34);
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(416, 39);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 17);
+            this.label14.Size = new System.Drawing.Size(137, 38);
             this.label14.TabIndex = 6;
             this.label14.Text = "Register";
             this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(322, 449);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(314, 449);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(155, 57);
             this.button2.TabIndex = 7;
@@ -146,30 +154,31 @@ namespace TourismDatabase1
             // 
             // PhoneNumberBox
             // 
-            this.PhoneNumberBox.Location = new System.Drawing.Point(250, 276);
+            this.PhoneNumberBox.Location = new System.Drawing.Point(250, 273);
             this.PhoneNumberBox.Name = "PhoneNumberBox";
             this.PhoneNumberBox.Size = new System.Drawing.Size(590, 22);
             this.PhoneNumberBox.TabIndex = 11;
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(250, 329);
+            this.EmailBox.Location = new System.Drawing.Point(250, 326);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(590, 22);
             this.EmailBox.TabIndex = 12;
             // 
             // AddressBox
             // 
-            this.AddressBox.Location = new System.Drawing.Point(250, 381);
+            this.AddressBox.Location = new System.Drawing.Point(250, 378);
             this.AddressBox.Name = "AddressBox";
             this.AddressBox.Size = new System.Drawing.Size(590, 22);
             this.AddressBox.TabIndex = 13;
             // 
             // SignInSection
             // 
-            this.SignInSection.Location = new System.Drawing.Point(574, 449);
+            this.SignInSection.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignInSection.Location = new System.Drawing.Point(542, 449);
             this.SignInSection.Name = "SignInSection";
-            this.SignInSection.Size = new System.Drawing.Size(155, 57);
+            this.SignInSection.Size = new System.Drawing.Size(185, 57);
             this.SignInSection.TabIndex = 14;
             this.SignInSection.Text = "Already have an account? Sign in now!";
             this.SignInSection.UseVisualStyleBackColor = true;
@@ -194,6 +203,7 @@ namespace TourismDatabase1
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Name = "RegisterForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegisterForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

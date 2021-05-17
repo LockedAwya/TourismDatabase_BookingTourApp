@@ -14,10 +14,11 @@ namespace TourismDatabase1
     public partial class UserMainFrame : Class1
     {
         private LoginForm login = null;
-        private string query1 = "select t.*, fm.flight_name from tour t join flight_manager fm on t.flight_id = fm.flight_id order by t.id";
+        private string query3 = "call getTourRecords();";
         private static UserMainFrame userMainFrame = new UserMainFrame();
         private BookingTourSection userControl1 = null;
         private Profile profile = null;
+        private BookingHistory bookingHistory = null;
         public UserMainFrame()
         {
             InitializeComponent();
@@ -73,10 +74,10 @@ namespace TourismDatabase1
             connection = base.getConnectionInstance();
             if (AppStates.isLogin == true)
             {
-                adapter = new MySqlDataAdapter(query1, connection);
+                adapter = new MySqlDataAdapter(query3, connection);
                 adapter.Fill(dtb);
                 dataGridView1.DataSource = dtb;
-                MessageBox.Show("You are now connected");
+                //MessageBox.Show("You are now connected");
                 //BookTourButton.Enabled = false;
                 connection.Close();
             }
@@ -84,12 +85,9 @@ namespace TourismDatabase1
 
         private void displaySearchData()
         {
-            //AppStates.dtb = new DataTable();
             dtb = base.getDataTable();
-            //AppStates.connection = ConnectionSingleton.getInstance();
             connection = base.getConnectionInstance();
-            string search = "select t.*, fm.flight_name from tour t join flight_manager fm on t.flight_id = fm.flight_id " + "and id like '%" + SearchBox.Text + "%'" + " or name like '%" + SearchBox.Text + "%'";
-            //string searchPrefixTourID = "select * from tour where id like '%" + SearchBox.Text + "%'" + " or name like '%" + SearchBox.Text + "%'";
+            string search = "call get_records('" + SearchBox.Text + "')";
             if (AppStates.isLogin == true)
             {
                 //cmd = new MySqlCommand(search, connection);
@@ -99,13 +97,8 @@ namespace TourismDatabase1
                 adapter = base.getAdapter(search, connection);
                 adapter.Fill(dtb);
                 dataGridView1.DataSource = dtb;
-                MessageBox.Show("You are now connected");
-                //BookTourButton.Enabled = false;
                 connection.Close();
             }
-            //SearchBox.Text
-            //dtb = new DataTable();
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -125,7 +118,9 @@ namespace TourismDatabase1
             AppStates1.children_price = ChildrenPriceBox.Text;
             AdultPriceBox.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
             AppStates1.adult_price = AdultPriceBox.Text;
-            FlightBrandBox.Text = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
+            FlightBrandBox.Text = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+            TA_NameBox.Text = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();
+            TA_PNumberBox.Text = dataGridView1.Rows[e.RowIndex].Cells[14].Value.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -200,6 +195,17 @@ namespace TourismDatabase1
             panel1.Controls.Add(profile);
             profile.Dock = DockStyle.Fill;
             profile.BringToFront();
+        }
+
+        private void UserMainFrame_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            bookingHistory = new BookingHistory();
+            bookingHistory.Show();
         }
     }
 }

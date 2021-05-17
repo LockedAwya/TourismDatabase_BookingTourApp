@@ -41,9 +41,9 @@ namespace TourismDatabase1
             // LoginBox
             // 
             this.LoginBox.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBox.Location = new System.Drawing.Point(192, 372);
+            this.LoginBox.Location = new System.Drawing.Point(117, 355);
             this.LoginBox.Name = "LoginBox";
-            this.LoginBox.Size = new System.Drawing.Size(179, 49);
+            this.LoginBox.Size = new System.Drawing.Size(179, 66);
             this.LoginBox.TabIndex = 0;
             this.LoginBox.Text = "Login";
             this.LoginBox.UseVisualStyleBackColor = true;
@@ -52,9 +52,9 @@ namespace TourismDatabase1
             // RegisterBox
             // 
             this.RegisterBox.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterBox.Location = new System.Drawing.Point(437, 372);
+            this.RegisterBox.Location = new System.Drawing.Point(397, 355);
             this.RegisterBox.Name = "RegisterBox";
-            this.RegisterBox.Size = new System.Drawing.Size(179, 49);
+            this.RegisterBox.Size = new System.Drawing.Size(275, 66);
             this.RegisterBox.TabIndex = 1;
             this.RegisterBox.Text = "Don\'t have account? Register now!";
             this.RegisterBox.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@ namespace TourismDatabase1
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(79, 224);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 19);
+            this.label1.Size = new System.Drawing.Size(83, 19);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Email or Username";
+            this.label1.Text = "Username";
             // 
             // label2
             // 
@@ -120,6 +120,7 @@ namespace TourismDatabase1
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "LoginForm";
             this.Text = "Form2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -65,3 +65,6 @@ C:\Users\Asus\Desktop\TourismDatabase12-main\TourismDatabase1\obj\Debug\TourismD
 C:\Users\Asus\Desktop\TourismDatabase12-main\TourismDatabase1\obj\Debug\TourismDatabase1.exe
 C:\Users\Asus\Desktop\TourismDatabase12-main\TourismDatabase1\obj\Debug\TourismDatabase1.pdb
 C:\Users\Asus\Desktop\TourismDatabase12-main\TourismDatabase1\obj\Debug\TourismDatabase1.AppStates1.resources
+C:\Users\Asus\Desktop\TourismDatabase12-main\TourismDatabase1\obj\Debug\TourismDatabase1.TravelAgentsForm.resources
+C:\Users\Asus\Desktop\TourismDatabase12-main\TourismDatabase1\obj\Debug\TourismDatabase1.changePasswordForm.resources
+C:\Users\Asus\Desktop\TourismDatabase12-main\TourismDatabase1\obj\Debug\TourismDatabase1.BookingHistory.resources

@@ -29,100 +29,131 @@ namespace TourismDatabase1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainFrame));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.showtravelagentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showtourguidesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showuseraccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showbookingsectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1.SuspendLayout();
+            this.QueryBox = new System.Windows.Forms.RichTextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.QueryHistory = new System.Windows.Forms.RichTextBox();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.InsertButton = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // toolStrip1
+            // QueryBox
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSplitButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.QueryBox.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QueryBox.Location = new System.Drawing.Point(39, 91);
+            this.QueryBox.Name = "QueryBox";
+            this.QueryBox.Size = new System.Drawing.Size(484, 141);
+            this.QueryBox.TabIndex = 37;
+            this.QueryBox.Text = "";
             // 
-            // toolStrip2
+            // button2
             // 
-            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip2.Location = new System.Drawing.Point(0, 27);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip2.TabIndex = 1;
-            this.toolStrip2.Text = "toolStrip2";
+            this.button2.Location = new System.Drawing.Point(552, 134);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 57);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "Execuate";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // toolStripSplitButton1
+            // dataGridView1
             // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showtravelagentsToolStripMenuItem,
-            this.showtourguidesToolStripMenuItem,
-            this.showuseraccountToolStripMenuItem,
-            this.showbookingsectionToolStripMenuItem});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(39, 24);
-            this.toolStripSplitButton1.Text = "toolStripSplitButton1";
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(39, 250);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1052, 287);
+            this.dataGridView1.TabIndex = 39;
             // 
-            // showtravelagentsToolStripMenuItem
+            // button3
             // 
-            this.showtravelagentsToolStripMenuItem.Name = "showtravelagentsToolStripMenuItem";
-            this.showtravelagentsToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.showtravelagentsToolStripMenuItem.Text = "show_travel_agents";
-            this.showtravelagentsToolStripMenuItem.Click += new System.EventHandler(this.showtravelagentsToolStripMenuItem_Click);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(998, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 41);
+            this.button3.TabIndex = 41;
+            this.button3.Text = "Log out";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // showtourguidesToolStripMenuItem
+            // QueryHistory
             // 
-            this.showtourguidesToolStripMenuItem.Name = "showtourguidesToolStripMenuItem";
-            this.showtourguidesToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.showtourguidesToolStripMenuItem.Text = "show_tour_guides";
+            this.QueryHistory.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QueryHistory.Location = new System.Drawing.Point(698, 91);
+            this.QueryHistory.Name = "QueryHistory";
+            this.QueryHistory.Size = new System.Drawing.Size(393, 141);
+            this.QueryHistory.TabIndex = 42;
+            this.QueryHistory.Text = "";
             // 
-            // showuseraccountToolStripMenuItem
+            // DeleteButton
             // 
-            this.showuseraccountToolStripMenuItem.Name = "showuseraccountToolStripMenuItem";
-            this.showuseraccountToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.showuseraccountToolStripMenuItem.Text = "show_user_account";
+            this.DeleteButton.Location = new System.Drawing.Point(39, 7);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(131, 32);
+            this.DeleteButton.TabIndex = 43;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
-            // showbookingsectionToolStripMenuItem
+            // InsertButton
             // 
-            this.showbookingsectionToolStripMenuItem.Name = "showbookingsectionToolStripMenuItem";
-            this.showbookingsectionToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.showbookingsectionToolStripMenuItem.Text = "show_booking_section";
+            this.InsertButton.Location = new System.Drawing.Point(204, 7);
+            this.InsertButton.Name = "InsertButton";
+            this.InsertButton.Size = new System.Drawing.Size(131, 32);
+            this.InsertButton.TabIndex = 44;
+            this.InsertButton.Text = "Insert";
+            this.InsertButton.UseVisualStyleBackColor = true;
+            this.InsertButton.Click += new System.EventHandler(this.InsertButton_Click);
             // 
-            // Form2
+            // UpdateButton
+            // 
+            this.UpdateButton.Location = new System.Drawing.Point(374, 7);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(131, 32);
+            this.UpdateButton.TabIndex = 45;
+            this.UpdateButton.Text = "Update";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
+            // AdminMainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.toolStrip2);
-            this.Controls.Add(this.toolStrip1);
-            this.Name = "Form2";
+            this.ClientSize = new System.Drawing.Size(1105, 562);
+            this.Controls.Add(this.UpdateButton);
+            this.Controls.Add(this.InsertButton);
+            this.Controls.Add(this.DeleteButton);
+            this.Controls.Add(this.QueryHistory);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.QueryBox);
+            this.Name = "AdminMainFrame";
             this.Text = "Form2";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminMainFrame_FormClosed);
+            this.Load += new System.EventHandler(this.AdminMainFrame_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.ToolStripMenuItem showtravelagentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showtourguidesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showuseraccountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem showbookingsectionToolStripMenuItem;
-        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.RichTextBox QueryBox;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RichTextBox QueryHistory;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button InsertButton;
+        private System.Windows.Forms.Button UpdateButton;
     }
 }

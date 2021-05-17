@@ -16,7 +16,7 @@ namespace TourismDatabase1
     {
         private static Profile profile = new Profile();
         private string query = "select id, name, username, phone_number, email, address from account where id = '" + AppStates1.userId + "'";
-
+        private changePasswordForm changepass = null;
         public static Profile getInstance()
         {
             if (profile == null)
@@ -92,22 +92,6 @@ namespace TourismDatabase1
                 } 
             }
             connection.Close();
-            /*ID_TourBox.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            AppStates1.TourID = ID_TourBox.Text;
-            TourNameBox.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            AppStates1.Tourname = TourNameBox.Text;
-            Country_Box.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            DescriptionBox.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            PolicyBox.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            StartDateBox.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            EndDateBox.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            StartDestBox.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            EndDestBox.Text = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-            ChildrenPriceBox.Text = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-            AppStates1.children_price = ChildrenPriceBox.Text;
-            AdultPriceBox.Text = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
-            AppStates1.adult_price = AdultPriceBox.Text;
-            FlightBrandBox.Text = dataGridView1.Rows[e.RowIndex].Cells[13].Value.ToString();*/
         }
 
         private void EditButton_Click(object sender, EventArgs e)
@@ -117,6 +101,18 @@ namespace TourismDatabase1
             PhoneNumberBox.ReadOnly = false;
             EmailBox.ReadOnly = false;
             AddressBox.ReadOnly = false;
+        }
+
+        private void ChangePassButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                changepass = new changePasswordForm();
+                changepass.Show();
+            } catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
     }
 }
