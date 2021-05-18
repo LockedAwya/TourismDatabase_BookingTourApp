@@ -13,8 +13,8 @@ namespace TourismDatabase1
 {
     public partial class FillingAdultInfo : AppStates1
     {
-        private string AddTravellersInfo = "Insert into tourismdatabase.travellers_info(aid, tid, ssn, name, PassportNumber, PhoneNumber, Country, BirthDate, Gender, age) " +
-                    "values(@aid, @tid, @ssn, @name, @PassportNumber, @PhoneNumber, @Country, @BirthDate, @Gender, @age)";
+        private string AddTravellersInfo = "Insert into tourismdatabase.travellers_info(aid, tour_id, ssn, name, PassportNumber, PhoneNumber, Country, BirthDate, Gender, age) " +
+                    "values(@aid, @tour_id, @ssn, @name, @PassportNumber, @PhoneNumber, @Country, @BirthDate, @Gender, @age)";
         private int age = 0;
         string query = "Insert into tourismdatabase.paymenttype(aid, tid, paymentmethod) " +
                     "values(@aid, @tid, @paymentmethod)";
@@ -58,7 +58,7 @@ namespace TourismDatabase1
                 {
                     cmd = new MySqlCommand(AddTravellersInfo, connection);
                     cmd.Parameters.AddWithValue("@aid", userId);
-                    cmd.Parameters.AddWithValue("@tid", TourID);
+                    cmd.Parameters.AddWithValue("@tour_id", TourID);
                     cmd.Parameters.AddWithValue("@ssn", SSNTextBox.Text);
                     cmd.Parameters.AddWithValue("@name", NameTextBox.Text);
                     cmd.Parameters.AddWithValue("@PassportNumber", PassportTextBox.Text);

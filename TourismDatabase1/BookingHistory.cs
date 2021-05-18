@@ -32,8 +32,6 @@ namespace TourismDatabase1
                 dataGridView1.Update();
                 string query = "select * from travellers_info where aid = '" + AppStates1.userId + "'";
                 cmd = base.getCmd(query, connection);
-                //cmd.Parameters.AddWithValue("@data", SearchBox.Text);
-                //adapter = new MySqlDataAdapter(search, connection);
                 adapter = base.getAdapter(query, connection);
                 adapter.Fill(dtb);
                 dataGridView1.DataSource = dtb;
@@ -47,8 +45,6 @@ namespace TourismDatabase1
                 dataGridView1.Update();
                 string query = "call ViewBookingActivity" + "('" + AppStates1.userId + "','" + SearchBox.Text + "');";
                 cmd = base.getCmd(query, connection);
-                //cmd.Parameters.AddWithValue("@data", SearchBox.Text);
-                //adapter = new MySqlDataAdapter(search, connection);
                 adapter = base.getAdapter(query, connection);
                 adapter.Fill(dtb);
                 dataGridView1.DataSource = dtb;
