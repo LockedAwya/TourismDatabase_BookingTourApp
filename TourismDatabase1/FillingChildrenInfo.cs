@@ -63,25 +63,6 @@ namespace TourismDatabase1
                 MessageBox.Show(ex.Message);
                 connection.Close();
             }
-            /*try
-            {
-                connection = base.getConnectionInstance();
-                connection.Open();
-                cmd = new MySqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@aid", userId);
-                cmd.Parameters.AddWithValue("@tid", TourID);
-                cmd.Parameters.AddWithValue("@paymentmethod", AppStates1.payment);
-                cmd.ExecuteNonQuery();
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                string query = "update paymenttype set paymentmethod = '" + AppStates1.payment + "' where aid ='" 
-                    + userId + "' and tid ='" + TourID + "';";
-                cmd = base.getCmd(query, connection);
-                cmd.ExecuteNonQuery();
-                connection.Close();
-            }*/
         }
 
         private void BirthDatePicker_ValueChanged(object sender, EventArgs e)

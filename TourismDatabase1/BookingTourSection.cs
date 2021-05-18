@@ -148,28 +148,7 @@ namespace TourismDatabase1
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            /*try
-            {
-                AppStates1.payment = Payment.SelectedItem.ToString();
-                connection = base.getConnectionInstance();
-                connection.Open();
-                cmd = new MySqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@aid", userId);
-                cmd.Parameters.AddWithValue("@tid", TourID);
-                cmd.Parameters.AddWithValue("@paymentmethod", Payment.SelectedItem.ToString());
-                cmd.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Choose payment method successfully!");
-            } catch (Exception err)
-            {
-                //MessageBox.Show(err.Message);
-                //connection = base.getConnectionInstance();
-                //connection.Open();
-                string query = "update paymenttype set paymentmethod = '" + Payment.Text + "' where aid ='" + userId + "' and tid ='" + TourID + "';";
-                cmd = base.getCmd(query, connection);
-                cmd.ExecuteNonQuery();
-                connection.Close();
-            }*/
+            
         }
 
         private void button4_Click_2(object sender, EventArgs e)

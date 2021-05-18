@@ -53,12 +53,12 @@ namespace TourismDatabase1
 
         private void label3_Click(object sender, EventArgs e)
         {
-            //label3.Text = login.getUserName();
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            //label3.Text = login.getUserName();
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -68,17 +68,13 @@ namespace TourismDatabase1
 
         private void displayAllData()
         {
-            //dtb = new DataTable();
             dtb = base.getDataTable();
-            //connection = ConnectionSingleton.getInstance();
             connection = base.getConnectionInstance();
             if (AppStates.isLogin == true)
             {
                 adapter = new MySqlDataAdapter(query3, connection);
                 adapter.Fill(dtb);
                 dataGridView1.DataSource = dtb;
-                //MessageBox.Show("You are now connected");
-                //BookTourButton.Enabled = false;
                 connection.Close();
             }
         }
